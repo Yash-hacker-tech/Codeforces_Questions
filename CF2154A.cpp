@@ -33,7 +33,33 @@ bool isValidTriangle(ll a, ll b, ll c)
 
 void solve() 
 {
-    
+    ll_2(n, k);
+    str_1(s);
+    ll cnt = 0, ans = 0;
+    r(i, 0, n) 
+    {
+        if(cnt == 0)
+        {
+            if(s[i] == '1')
+            {
+                cnt = k-1;
+                ans ++;
+            }
+        }
+        else
+        {
+            if(s[i] == '1')
+            {
+                cnt = k-1;
+            }
+            else
+            {
+                cnt --;
+            }
+        }
+    }
+    cout << ans << "\n";
+    return;
 }
 
 int main()

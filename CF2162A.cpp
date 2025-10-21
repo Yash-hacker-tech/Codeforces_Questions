@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #define fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-
+ 
 #define ll long long
 #define vi vector<int>
 #define vc vector<char>
@@ -18,24 +18,24 @@
 #define minIdxInVec(v) min_element(v.begin(), v.end()) - v.begin()
 #define MOD 100000007
 #define ll_1(n) ll n; cin >> n;
-#define int_1(n) int n; cin >> n;
-#define ll_2(a, b) ll a, b; cin >> a >> b;
-#define vec_ll(v, n) vll v(n); r(i, 0, n) cin >> v[i];
-#define str_1(s) string s; cin >> s;
-
+#define vec_ll(v, n) vll v(n, 0); r(i, 0, n) cin>>v[i];
+ 
 using namespace std;
-
+ 
 bool isValidTriangle(ll a, ll b, ll c) 
 {
     return (a + b > c) && (a + c > b) && (b + c > a);
 }
-
-
+ 
+ 
 void solve() 
 {
-    
+    ll_1(n);
+    vec_ll(v, n);
+    cout << maxInVec(v) << "\n";
+    return;
 }
-
+ 
 int main()
 {
     fast;

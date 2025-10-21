@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "*.wmls": "javascriptlite",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "random": "cpp"
     }
 }
