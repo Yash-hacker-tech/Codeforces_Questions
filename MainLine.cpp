@@ -4,6 +4,7 @@
 #define ll long long
 #define vi vector<int>
 #define vc vector<char>
+#define vb vector<bool>
 #define vll vector<long long>
 #define vvi vector<vector<int>>
 #define vvc vector<vector<char>>
