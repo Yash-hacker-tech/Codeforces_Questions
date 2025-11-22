@@ -44,15 +44,28 @@ bool isPrime(ll n)
     return true;
 }
 
-int ithBit(int n, int i) 
-{
-    return (n >> i) & 1;
-}
-
 
 void solve() 
 {
+    ll_1(n);
+    vi v(n);
+    r(i, 0, n)
+    {
+        cin >> v[i];
+    }
+    if(v[0] == -1 || v[n-1] == -1) cout << 0 << endl;
+    else cout << abs(v[n-1] - v[0]) <<"\n";
     
+    if(v[0] == -1 && v[n-1] == -1) cout << 0 << " ";
+    else if(v[0] == -1) cout << v[n-1] << " ";
+    else cout << v[0] << " ";
+    r(i, 1, n-1)
+    {
+        cout << (v[i] == -1 ? 0 : v[i]) << " ";
+    }
+    if(v[0] == -1 && v[n-1] == -1) cout << 0 << "\n";
+    else if(v[n-1] == -1) cout << v[0] << "\n";
+    else cout << v[n-1] << "\n";
 }
 
 int main()

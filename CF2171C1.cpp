@@ -44,15 +44,29 @@ bool isPrime(ll n)
     return true;
 }
 
-int ithBit(int n, int i) 
-{
-    return (n >> i) & 1;
-}
-
 
 void solve() 
 {
-    
+    int n, x = 0, idx;
+    cin >> n;
+    vi a(n), b(n);
+    r(i, 0, n)
+    {
+        cin >> a[i];
+        x ^= a[i];
+    }
+    r(i, 0, n)
+    {
+        cin >> b[i];
+        x ^= b[i];
+    }
+    if(!x)
+    {
+        cout << "Tie" << '\n';
+        return;
+    }
+    for(int i=0; i<n; i++) if(a[i] ^ b[i]) idx = i;
+    cout << (idx & 1 ? "Mai" : "Ajisai") << '\n';
 }
 
 int main()

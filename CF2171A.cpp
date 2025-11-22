@@ -44,15 +44,11 @@ bool isPrime(ll n)
     return true;
 }
 
-int ithBit(int n, int i) 
-{
-    return (n >> i) & 1;
-}
-
 
 void solve() 
 {
-    
+    ll_1(n);
+    cout<<((n&1)? 0: n/4 + 1)<<endl;
 }
 
 int main()

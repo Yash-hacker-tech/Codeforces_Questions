@@ -50,9 +50,50 @@ int ithBit(int n, int i)
 }
 
 
+char solvep1(vi a, vi b, int n) 
+{
+    int x = 0, idx;
+    r(i, 0, n) x ^= a[i];
+    r(i, 0, n) x ^= b[i];
+    if(!x)
+    {
+        return 'T';
+    }
+    for(int i=0; i<n; i++) if(a[i] ^ b[i]) idx = i;
+    if(idx & 1) return 'M';
+    else return 'A';
+}
+
 void solve() 
 {
-    
+    int n, cnt;
+    cin >> n;
+    vi a(n), b(n);
+    r(i, 0, n) cin >> a[i];
+    r(i, 0, n) cin >> b[i];
+    cnt = log(max(maxInVec(a), maxInVec(b))) / log(2);
+    while(cnt >= 0)
+    {
+        vi a1 = a, b1 = b;
+        r(i, 0, n)
+        {
+            a1[i] = ithBit(a[i], cnt);
+            b1[i] = ithBit(b[i], cnt);
+        }
+        if(solvep1(a1, b1, n) == 'A')
+        {
+            cout << "Ajisai\n";
+            return;
+        }
+        else if(solvep1(a1, b1, n) == 'M')
+        {
+            cout << "Mai\n";
+            return;
+        }
+        cnt--;
+    }
+    cout << "Tie\n";
+
 }
 
 int main()
