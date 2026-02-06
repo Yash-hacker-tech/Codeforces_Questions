@@ -59,7 +59,21 @@ long long xor_upto(long long n)
 
 void solve() 
 {
-    
+    ll_2(a, b);
+
+    ll x = xor_upto(a - 1);
+    if (x == b) 
+    {
+        cout << a << '\n';
+    } 
+    else if ( (x ^ a) == b ) 
+    {
+        cout << a + 2 << '\n';
+    } 
+    else 
+    {
+        cout << a + 1 << '\n';
+    }
 }
 
 int main()

@@ -49,23 +49,21 @@ int ithBit(int n, int i)
     return (n >> i) & 1;
 }
 
-long long xor_upto(long long n) 
-{
-    if (n % 4 == 0) return n;
-    if (n % 4 == 1) return 1;
-    if (n % 4 == 2) return n + 1;
-    return 0;
-}
 
 void solve() 
 {
-    
+    int a, b, c;
+    cin >> a >> b >> c;
+    int max1 = max({a, b, c});
+    int min1 = min({a, b, c});
+    int mid1 = a + b + c - max1 - min1;
+    if(max1 - min1 >= 10) cout << "check again\n";
+    else cout << "final " << mid1 << "\n";
 }
 
 int main()
 {
     fast;
-    ll t; cin >> t;
-    while (t--) solve();
+    solve();
     return 0;
 }

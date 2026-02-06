@@ -59,7 +59,32 @@ long long xor_upto(long long n)
 
 void solve() 
 {
-    
+    ll_2(w, h);
+
+    ll ans = 0;
+    int k;
+
+    cin >> k;
+    vll xs(k);
+    r(i, 0, k) cin >> xs[i];
+    ans = max(ans, (xs.back() - xs.front()) * h);
+
+    cin >> k;
+    xs.resize(k);
+    r(i, 0, k) cin >> xs[i];
+    ans = max(ans, (xs.back() - xs.front()) * h);
+
+    cin >> k;
+    vll ys(k);
+    r(i, 0, k) cin >> ys[i];
+    ans = max(ans, (ys.back() - ys.front()) * w);
+
+    cin >> k;
+    ys.resize(k);
+    r(i, 0, k) cin >> ys[i];
+    ans = max(ans, (ys.back() - ys.front()) * w);
+
+    cout << ans << '\n';
 }
 
 int main()

@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 #define fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
@@ -49,17 +50,21 @@ int ithBit(int n, int i)
     return (n >> i) & 1;
 }
 
-long long xor_upto(long long n) 
-{
-    if (n % 4 == 0) return n;
-    if (n % 4 == 1) return 1;
-    if (n % 4 == 2) return n + 1;
-    return 0;
-}
-
 void solve() 
 {
+    ll_1(n);
+    ll_2(r, b);    
     
+    ll base = r / (b + 1); 
+    ll extra = r % (b + 1); 
+
+    r(i, 0, b+1) 
+    {
+        ll len = base + (i < extra ? 1 : 0); 
+        for (int j = 0; j < len; j++) cout << 'R';
+        if (i < b) cout << 'B';  
+    }
+    cout << '\n';
 }
 
 int main()

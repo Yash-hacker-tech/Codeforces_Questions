@@ -60,6 +60,29 @@ long long xor_upto(long long n)
 void solve() 
 {
     
+	ll_2(n, x);
+	vec_ll(arr, n);
+	
+	ll ans = 0;
+	
+	ll p1 = -x + arr[0], p2 = x + arr[0];
+	for(ll k : arr) 
+    {
+		ll c1 = -x + k, c2 = x + k;
+		ll i1 = max(p1,c1), i2 = min(p2,c2);
+		if(i1 > i2) 
+        {
+			ans++;
+			p1 = c1;
+			p2 = c2;
+		} 
+        else 
+        {
+			p1 = i1;
+			p2 = i2;
+		}
+	}
+    cout << ans << endl;
 }
 
 int main()
